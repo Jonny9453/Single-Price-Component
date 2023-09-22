@@ -1,0 +1,154 @@
+
+:root{
+
+    --cyan: hsl(179, 62%, 43%);
+ --brightYellow: hsl(71, 73%, 54%);
+ --lightGray: hsl(204, 43%, 93%);
+--grayishBlue: hsl(218, 22%, 67%);
+
+}
+
+body{
+    background-color: var(--lightGray);
+    font-family: 'Karla', sans-serif;
+   
+}
+
+.containers{
+    
+    min-height: 100vh;
+   display: grid;
+   place-content: center;
+   position: relative;
+    
+   
+}
+@media (max-width:600px ){
+
+    .body{
+        width: fit-content;
+    }
+    .container{
+        color:red;
+        display:grid;
+        
+        max-width: 20rem;
+        border-radius: 5px;
+        overflow: hidden;
+        grid-template-rows:repeat(3,1fr) ;
+    }
+
+    .containers{
+        min-height: 100vh;
+        display: grid;
+        place-content: center;
+        position: relative;
+        
+    }
+
+    .container-section-1{
+        grid-column-start:1 !important;
+        grid-column-end:2 !important;
+       
+    }
+
+    .container-section-2{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        align-items: center;
+        
+    }
+    .container-section-3{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        
+        
+    }
+    
+}
+
+.container{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+   
+    width:650px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.container-section-1 >h2{
+    color: var(--cyan);
+
+}
+
+.container-section-1>p{
+    color: var(--brightYellow);
+}
+
+.container-section-1 .description-1{
+    color:var(--grayishBlue)
+}
+
+.container-section-1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 20px 40px;
+    
+    background-color: white;
+}
+
+.container-section-2{
+    background-color: var(--cyan);
+    color: white;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.container-section-3{
+    background-color: hsla(179, 62%, 43%, 0.718);
+    color:white;
+    padding:20px 40px;
+    align-items: center;
+}
+
+.price-description{
+    color: hsla(203, 44%, 93%, 0.737);
+    
+}
+.price{
+    font-size: 30px;
+    color:white
+}
+
+.container-section-3 >p{
+    color: hsla(203, 44%, 93%, 0.737);
+    font-weight: 300;
+    font-size: 16px;
+    width: 200px;
+}
+
+
+
+button{
+    background-color: var(--brightYellow);
+    width: 245px;
+    padding: 15px 0px;
+    border-radius: 4px;
+    border: none;
+    display: block;
+    margin: 20px auto;
+    color: white;
+    
+}
+
+button:hover{
+    background-image: linear-gradient(to bottom,hsl(71, 91%, 50%),hsla(71, 73%, 54%, 0.79));
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+}
+
+button:active {
+    background-color: hsl(71, 73%, 54%);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
